@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>
+            function addNums(){
+                const sumOne = Number(document.getElementById("addOne").value);
+                const sumTwo = Number(document.getElementById("addTwo").value);
+               
+                document.write(sumOne + sumTwo);
+            }
+            function multNums(){
+                const multOne = Number(document.getElementById("multOne").value);
+                const multTwo = Number(document.getElementById("multTwo").value);
+               
+                document.write(multOne * multTwo);
+            }
+
+            function findC(){
+                const a = Number(document.getElementById("aSquared").value);
+                const b = Number(document.getElementById("bSquared").value);
+
+                document.write(Math.sqrt(a * a + b * b));
+
+            }
+        </script>
+    </head>
+    <body>
+        <main>
+
+            <input id= "addOne" type="text"/>
+            +
+            <input id="addTwo" type="text"/>
+            <input id="sumButton" onclick="addNums()" type="button" value="add"/>
+            <br>
+            <br>
+            <input id= "multOne" type="text"/>
+            *
+            <input id="multTwo" type="text"/>
+            <input id="multButton" onclick="multNums()" type="button" value="multiply"/>
+            <br>
+            <br>
+
+            <p>Pythagorean theorem </p> 
+            <p> a= 
+            <input id="aSquared" type="text"/></p>
+            <p> b= 
+            <input id="bSquared" type="text"/> </p>
+            <input id="cButton" onclick="findC()" type="button" value="Find c">
+
+
+        </main>
+
+    </body>
+
+</html>
