@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function findDistance(xOne, yOne, xTwo, yTwo){
+                const distXY = Math.sqrt((xTwo*xTwo - xOne*xOne) + (yTwo*yTwo - yOne*yOne));
+                alert("The distance between the points is: "+ distXY + " ");
+                //calculates the distance and displays it
+                //in an alertbox
+            }
+            function findMidPoint(xOne, yOne, xTwo, yTwo){
+                const midX = (xOne + xTwo)/2;
+                const midY = (yOne + yTwo)/2;
+                alert("the midpoint is: (" + midX + " , " + midY + ")");
+            }
+            function calculateVal(outputType){
+                const x1 = Number(document.getElementById("x_1").value);
+                const y1 = Number(document.getElementById("y_1").value);
+                const x2 = Number(document.getElementById("x_2").value);
+                const y2 = Number(document.getElementById("y_2").value);
+                
+                if(outputType == 'distance'){
+                    findDistance(x1, y1, x2, y2);
+                } else if (outputType == 'midpoint'){
+                    findMidPoint(x1, y1, x2, y2);
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <main>
+            x<sub>1</sub>:
+            <input id="x_1" type="text"/><br>
+            y<sub>1</sub>:
+            <input id="y_1" type="text" /><br>
+            x<sub>2</sub>:
+            <input id="x_2" type="text"/><br>
+            y<sub>2</sub>:
+            <input id="y_2" type="text" /><br>
+            <input onclick="calculateVal('distance')" type="button" value="Find Distance" />
+            <input onclick="calculateVal('midpoint')" type="button" value="Find Midpoint" />
+
+            
+        </main>
+    </body>
+</html>

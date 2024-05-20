@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function findC(){
+            const a = Number(document.getElementById("aSquared").value);
+            const b = Number(document.getElementById("bSquared").value);
+            const c = Math.sqrt(a*a+b*b);
+            document.getElementById("aOut").innerHTML=a;
+            document.getElementById("bOut").innerHTML=b;
+            document.getElementById("cOut").innerHTML=c;
+            }
+
+
+
+        </script>
+    </head>
+
+
+
+
+    <body>
+        <main>
+            <p>Pythagorean theorem </p> 
+            <p> a= <input id="aSquared" type="text"/></p>
+            <p> b= <input id="bSquared" type="text"/> </p>
+
+
+
+
+            <input id="cButton" onclick="findC()" type="button" value="Find c">
+            <p> If the legs of a right triangle measure <span id="aOut"></span> and <span id="bOut"></span>
+           then the hypotenuse measures <span id="cOut"></span></p>
+
+
+
+        </main>
+
+
+    </body>
+
+
+</html>

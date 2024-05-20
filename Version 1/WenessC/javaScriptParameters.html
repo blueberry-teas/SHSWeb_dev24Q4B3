@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <script>
+
+            function alertOne(textOne){
+                alert(textOne);
+            }
+
+
+            function alertTwo(textOne, textTwo){
+                alert(textOne);
+                alert(textTwo);
+            }
+            function alertThree(textOne, textTwo, textThree){
+                alertTwo(textOne, textTwo);
+                alert(textThree);
+            }
+        </script>
+
+    </head>
+    <body>
+        <main>
+            <input onclick="alertThree('here', 'there', 'and everywhere')" type="button" value="test"/>
+
+        </main>
+    </body>
+    </html>

@@ -6,7 +6,7 @@
                 const sumOne = Number(document.getElementById("addOne").value);
                 const sumTwo = Number(document.getElementById("addTwo").value);
                
-                document.write(sumOne + sumTwo);
+                document.getElementId("sumOutput").innerHTML = addOne + addTwo
             }
             function multNums(){
                 const multOne = Number(document.getElementById("multOne").value);
@@ -18,9 +18,10 @@
             function findC(){
                 const a = Number(document.getElementById("aSquared").value);
                 const b = Number(document.getElementById("bSquared").value);
-
-                document.write(Math.sqrt(a * a + b * b));
-
+                const c = Math.sqrt(a*a+b*b);
+                document.getElementById("aOut").innerHTML=a;
+                document.getElementById("bOut").innerHTML=b;
+                document.getElementById("cOut").innerHTML=c;
             }
         </script>
     </head>
@@ -31,7 +32,10 @@
             +
             <input id="addTwo" type="text"/>
             <input id="sumButton" onclick="addNums()" type="button" value="add"/>
+            <div id= "sumOutput"> The sum is: </div>
             <br>
+
+
             <br>
             <input id= "multOne" type="text"/>
             *
@@ -46,7 +50,8 @@
             <p> b= 
             <input id="bSquared" type="text"/> </p>
             <input id="cButton" onclick="findC()" type="button" value="Find c">
-
+            <p> If the legs of a right triangle measure <span id="aOut"></span> and <span id="bOut"></span>
+           then the hypotenuse measures <span id="cOut"></span></p>
 
         </main>
 
